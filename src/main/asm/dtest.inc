@@ -1,10 +1,14 @@
-include delta.inc
+include 'delta.inc'
 
-section '.data' data readable writeable
+
 
 namespace dtest
-	.disable = 1
+	.disable = 0
+	.subspace = 0
+	.subspace.disable = 1
+	.subspace.subsubspace = 0
+	.subspace.subsubspace.disable = 0
+	.subspace.subsubspace.subsubsubspace = 0
+	.subspace.subsubspace.subsubsubspace.disable = 0
 end namespace
 
-
-section '.text' code readable writeable executable 
